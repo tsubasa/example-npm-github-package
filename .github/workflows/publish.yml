@@ -10,6 +10,11 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+
+    permissions:
+      packages: write
+      contents: read
+
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -34,7 +39,7 @@ jobs:
         run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: set PACKAGE_VERSION
+      - name: SET PACKAGE_VERSION
         run: node -p -e '`PACKAGE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
       - name: package-version-to-git-tag
         uses: pkgdeps/git-tag-action@v2
