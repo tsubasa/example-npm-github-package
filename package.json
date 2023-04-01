@@ -1,6 +1,6 @@
 {
   "name": "@tsubasa/example-npm-github-package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "npm registry to GitHub Package Registry example.",
   "type": "module",
   "main": "lib/index.js",
