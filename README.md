@@ -41,7 +41,7 @@ Create `.yarnrc` in your PROJECT_ROOT
 
 ```sh
 $ npm install @tsubasa/example-npm-github-package
-$ yarn install @tsubasa/example-npm-github-package
+$ yarn add @tsubasa/example-npm-github-package
 ```
 
 ### 4. Import JS/TS
